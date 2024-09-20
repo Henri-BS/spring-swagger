@@ -1,6 +1,7 @@
 package com.pasifcode.spring_swagger.repository;
 
 import com.pasifcode.spring_swagger.entity.Usuario;
+import com.pasifcode.spring_swagger.handler.BusinessException;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -10,6 +11,9 @@ import java.util.List;
 public class UsuarioRepository {
 
     public void save(Usuario usuario) {
+        if(usuario.getUsername()==null)
+            throw new BusinessException("O campo username é obrigatório");
+
         if(usuario.getId()==null)
             System.out.println("SAVE - Recebendo o usuário no repository");
         else System.out.println("UPDATE - Recebendo o usuário no repository");
