@@ -19,6 +19,11 @@ public class UsuarioController {
         usuarioRepository.save(usuario);
     }
 
+    @PutMapping("/update")
+    public void updateUser(@RequestBody Usuario usuario){
+        usuarioRepository.save(usuario);
+    }
+
     @GetMapping("/list")
     public List<Usuario> findUsers(){
         return usuarioRepository.findAll();
@@ -29,7 +34,7 @@ public class UsuarioController {
         return usuarioRepository.findById(id);
     }
 
-    @GetMapping("/username/{username}")
+    @GetMapping("/{username}")
     public Usuario findUserByUsername(@PathVariable String username){
         return usuarioRepository.findByUsername(username);
     }

@@ -2,14 +2,14 @@ package com.pasifcode.spring_swagger.entity;
 
 public class Usuario {
     private Integer id;
-    private String login;
+    private String username;
     private String password;
 
     public Usuario() {
     }
 
-    public Usuario(String login, String password) {
-        this.login = login;
+    public Usuario(String username, String password) {
+        this.username = username;
         this.password = password;
     }
 
@@ -21,12 +21,12 @@ public class Usuario {
         this.id = id;
     }
 
-    public String getLogin() {
-        return login;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -40,8 +40,8 @@ public class Usuario {
     @Override
     public String toString(){
         return "User{" +
-                "login+'" + login + '\'' +
-                ", password='" + password + '\'' +
+                "username= '" + username + '\'' +
+                ", password= '" + password + '\'' +
                 '}';
     }
 }

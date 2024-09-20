@@ -25,17 +25,17 @@ public class UsuarioRepository {
     }
 
     public Usuario findById(Integer id){
-        System.out.println(String.format("FIND/id - Recebendo o id: %d para localizar um usuário"));
+        System.out.println("FIND/id - Recebendo o id: %d para localizar um usuário");
         return new Usuario("Jack", "Jack123");
     }
 
     public Usuario findByUsername(String username){
-        System.out.println(String.format("FIND/username - recebendo o username: %s para localizar um usuário"));
+        System.out.println("FIND/username - recebendo o username: %s para localizar um usuário");
         return new Usuario("jack", "jack123");
     }
 
     public void deleteById(Integer id){
-        System.out.println(String.format("DELETE/id - Recebendo o id: %d para excluir um usuário", id));
+        System.out.printf("DELETE/id - Recebendo o id: %d para excluir um usuário%n", id);
         System.out.println(id);
     }
 
